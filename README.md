@@ -18,4 +18,4 @@ cd hugo-blog
 hugo server
 ```
 
-使用 VS Code 或 grep 命令等方式，将所有含有 `yourname` 的地方进行修改。
+使用 VS Code 或 grep 命令等方式，将所有含有 `yourname` 的地方进行修改。（并不是所有 `yourname` 都是用户名，只是为了方便搜索全用的 `yourname` 。）

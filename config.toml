@@ -17,7 +17,7 @@ pygmentsCodefences = false
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 10                                              # 首页每页显示的文章数
 disqusShortname = ""      # disqus_shortname
-googleAnalytics = "UA-157787819-1"      # UA-XXXXXXXX-X
+googleAnalytics = "UA-yourname"      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
@@ -116,8 +116,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   baiduPush = true        # baidu push                  # 百度
   baiduAnalytics = ""      # Baidu Analytics
-  baiduVerification = "zW0oque8IK"   # Baidu Verification
-  googleVerification = "HAIwoMdm1A6XQ6Fp6KwAO7gpL5UKk5TOzvs9DuacYFI"  # Google Verification         # 谷歌
+  baiduVerification = "yourname"   # Baidu Verification
+  googleVerification = "yourname"  # Google Verification         # 谷歌
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
