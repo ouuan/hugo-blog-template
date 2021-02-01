@@ -1,21 +1,21 @@
 {{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
 
 {{- define "content" }}
-{{ $pageForUrl := dict }}
-{{ range .Site.Pages }}
+{{- $pageForUrl := dict -}}
+{{- range .Site.Pages -}}
 {{ $pageForUrl = merge $pageForUrl (dict (urls.Parse .RelPermalink).Path .) }}
-{{ end }}
-{{ $pages := slice }}
-{{ $clicks := dict }}
-{{ range .Site.Data.clicks.pages }}
-{{ $tmp := .clicks }}
-{{ with index $pageForUrl (urls.Parse .url).Path }}
-{{ if and (eq .Type "post") (eq .Kind "page") }}
-{{ $pages = $pages | append . }}
-{{ $clicks = merge $clicks (dict .RelPermalink $tmp) }}
-{{ end }}
-{{ end }}
-{{ end }}
+{{- end -}}
+{{- $pages := slice -}}
+{{- $clicks := dict -}}
+{{- range .Site.Data.clicks.pages -}}
+{{- $tmp := .clicks -}}
+{{- with index $pageForUrl (urls.Parse .url).Path -}}
+{{- if and (eq .Type "post") (eq .Kind "page") -}}
+{{- $pages = $pages | append . -}}
+{{- $clicks = merge $clicks (dict .RelPermalink $tmp) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
 {{- $paginator := .Paginate $pages .Site.Params.archivePaginate -}}
 <section id="archive" class="archive">
     <div class="archive-title">
@@ -46,7 +46,7 @@
             </a>
         </span>
     </div>
-    {{- end }}
+    {{ end }}
 </section>
 <!-- pagination -->
 <nav class="pagination">
